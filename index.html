@@ -3,53 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jean Dupont - Développeur Web</title>
+    <title>Jean Dupont - Développeur Web de Luxe</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Playfair Display', serif;
             margin: 0;
             padding: 0;
-            background-color: #121212;
-            color: #ffffff;
+            background-color: #1b1b1b;
+            color: #f5f5f5;
             overflow-x: hidden;
         }
         header {
-            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
             color: white;
-            padding: 2rem 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
-        header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 10%);
-            background-size: 50px 50px;
-            animation: rotate 25s linear infinite;
+        header h1 {
+            font-size: 4rem;
+            margin: 0;
         }
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+        header p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        nav a {
+            color: #f5f5f5;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+            transition: color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: #ff416c;
         }
         .container {
             width: 80%;
             margin: auto;
-            overflow: hidden;
-            padding: 2rem 0;
+            padding: 4rem 0;
         }
         section {
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
+            text-align: center;
         }
         h2 {
-            border-bottom: 3px solid #ff416c;
-            padding-bottom: 0.5rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
             position: relative;
+            display: inline-block;
         }
         h2::after {
             content: '';
@@ -57,25 +72,24 @@
             width: 50px;
             height: 3px;
             background: #ff416c;
-            left: 0;
-            bottom: -3px;
-            animation: grow 2s ease-in-out infinite;
-        }
-        @keyframes grow {
-            0% { width: 0; }
-            100% { width: 50px; }
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
         }
         .skills, .projects {
             display: flex;
+            justify-content: center;
+            gap: 2rem;
             flex-wrap: wrap;
-            gap: 1rem;
         }
         .skills li, .projects li {
             background: #333;
-            padding: 1rem;
-            border-radius: 5px;
-            flex: 1 1 calc(33% - 1rem);
+            padding: 2rem;
+            border-radius: 10px;
+            flex: 1 1 calc(33% - 2rem);
             transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+            list-style: none;
+            margin: 1rem 0;
         }
         .skills li:hover, .projects li:hover {
             transform: translateY(-10px);
@@ -85,7 +99,10 @@
             background: #333;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            text-align: left;
+            width: 50%;
+            margin: auto;
         }
         .contact-form input, .contact-form textarea {
             width: 100%;
@@ -109,9 +126,21 @@
         .contact-form button:hover {
             background: #ff4b2b;
         }
+        footer {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
     </style>
 </head>
 <body>
+    <nav>
+        <a href="#about">À propos</a>
+        <a href="#skills">Compétences</a>
+        <a href="#projects">Projets</a>
+        <a href="#contact">Contact</a>
+    </nav>
     <header>
         <h1>Jean Dupont</h1>
         <p>Développeur Web passionné par les technologies front-end</p>
@@ -154,6 +183,8 @@
             </div>
         </section>
     </div>
+    <footer>
+        &copy; 2024 Jean Dupont. Tous droits réservés.
+    </footer>
 </body>
 </html>
-
