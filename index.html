@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jean Dupont - Développeur Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        h2 {
+            border-bottom: 2px solid #0073e6;
+            padding-bottom: 0.5rem;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: #e6e6e6;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+        }
+        .contact-form {
+            background: #fff;
+            padding: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+        }
+        .contact-form button {
+            background: #0073e6;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jean Dupont</h1>
+        <p>Développeur Web passionné par les technologies front-end</p>
+    </header>
+    <div class="container">
+        <section id="about">
+            <h2>À propos de moi</h2>
+            <p>Je m'appelle Jean Dupont, je suis développeur web passionné par les technologies front-end. Avec plusieurs années d'expérience, je crée des sites web modernes et fonctionnels.</p>
+        </section>
+        <section id="skills">
+            <h2>Compétences</h2>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Vue.js</li>
+                <li>Node.js</li>
+            </ul>
+        </section>
+        <section id="projects">
+            <h2>Projets</h2>
+            <ul>
+                <li>Projet 1: Site de portfolio personnel</li>
+                <li>Projet 2: Application de gestion des tâches</li>
+                <li>Projet 3: Blog avec React et Node.js</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
